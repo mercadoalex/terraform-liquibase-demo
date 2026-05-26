@@ -1,17 +1,20 @@
 variable "db_name" {
   description = "The name of the MySQL database"
   type        = string
+  default     = "academia"
 }
 
 variable "db_username" {
   description = "The username for the MySQL database"
   type        = string
+  default     = "academia"
 }
 
 variable "db_password" {
   description = "The password for the MySQL database"
   type        = string
   sensitive   = true
+  default     = "academia"
 }
 
 variable "db_instance_type" {
@@ -32,16 +35,11 @@ variable "db_engine_version" {
   default     = "8.0"
 }
 
-variable "aws_region" {
-  description = "The AWS region where the resources will be created"
-  type        = string
-  default     = "us-east-1"
-}
-
 variable "vpc_id" {
   description = "The VPC ID where resources will be created"
   type        = string
 }
 variable "aws_region" {
+  description = "The AWS region where the resources will be created"
   default = "us-west-2"
 }
